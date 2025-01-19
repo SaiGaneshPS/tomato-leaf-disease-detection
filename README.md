@@ -3,7 +3,7 @@
 This project implements and compares three YOLO architectures (YOLOv8n, YOLOv9s, and YOLO11s) for detecting diseases in tomato leaves. The models are trained to identify 7 different conditions: Bacterial Spot, Early Blight, Healthy, Late Blight, Leaf Mold, Target Spot, and Black Spot.
 
 ```
-Please, if someone can let me know why YOLO version 11 does not have v in it's name like it's older version
+Please, if someone can let me know why YOLO version 11 does not have v in it's name like all the older versions
 I will be really grateful to them.
 ```
 
