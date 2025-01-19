@@ -4,23 +4,25 @@ This project implements and compares three YOLO architectures (YOLOv8n, YOLOv9s,
 
 ## Dataset Overview
 
-[Insert Class Distribution Plot]
+![image](https://github.com/user-attachments/assets/0430a3fd-41de-4b17-8d31-1cc6bca9c06d)
 
 The dataset consists of annotated tomato leaf images split into training, validation, and test sets. Each image is labeled with bounding boxes indicating disease locations and types.
 
 ### Class Distribution
 
-[Insert detailed class distribution statistics]
+![image](https://github.com/user-attachments/assets/a999cc0d-efc3-4991-823e-459735586fec)
 
 ### Sample Images
 
-[Insert 2-3 sample images with bounding box annotations]
+1. ![image](https://github.com/user-attachments/assets/d382cdf5-70dc-4d29-b3b0-8e2175dd4f17)
+
+2. ![image](https://github.com/user-attachments/assets/c927230b-e578-4ca3-8236-64fd5a11195d)
 
 ### Disease Co-occurrence
 
 The following matrix shows how different diseases tend to appear together in images:
 
-[Insert Co-occurrence Matrix]
+![image](https://github.com/user-attachments/assets/32da4dc8-9f7e-488f-9c27-c3b3c8d3382d)
 
 ## Model Architectures
 
@@ -92,19 +94,58 @@ The following matrix shows how different diseases tend to appear together in ima
 
 ### Confusion Matrices
 
-[Insert confusion matrices for each model]
+1. Confusion matrix for YOLOv8 on Test Set:
+![image](https://github.com/user-attachments/assets/dda003c7-6848-49bf-aa48-352ddeb8ecb2)
+
+2. Confusion matrix for YOLOv9 on Test Set:
+![image](https://github.com/user-attachments/assets/24e0bb4c-52c9-48d3-b4d6-fb761fd39be4)
+
+3. Confusion matrix for YOLO11 on Test Set:
+![image](https://github.com/user-attachments/assets/390ad727-0856-4fef-9883-661fd7430f7b)
 
 ### Precision-Recall Curves
 
-[Insert PR curves for each model]
+1. Precision-Recall curve for YOLOv8 on Test Set:
+![image](https://github.com/user-attachments/assets/7386ec34-4bd0-4501-8352-13e684a67164)
 
-## Model Comparison Analysis
+2. Precision-Recall curve for YOLOv9 on Test Set:
+![image](https://github.com/user-attachments/assets/3b44f8d0-401a-470d-b823-5f7d4127962d)
 
-### Speed vs Accuracy Trade-off
+3. Precision-Recall curve for YOLO11 on Test Set:
+![image](https://github.com/user-attachments/assets/55a64467-78e2-4214-ae3f-523d033b635a)
 
-- YOLOv8n offers the best inference speed (13.4ms) and highest mAP50 (0.774)
-- YOLOv9s achieves the highest mAP50-95 (0.489) but with slowest inference (23.7ms)
-- YOLO11s provides balanced performance with moderate speed (17.7ms)
+## Comprehensive Model Analysis
+
+### Performance Metrics Deep Dive
+
+#### Speed vs Accuracy Analysis
+1. **YOLOv8n**
+   - Fastest inference at 13.4ms
+   - Highest mAP50: 0.774
+   - Best choice for real-time applications
+   - Smallest model (3M parameters) making it ideal for edge devices
+   - Processing breakdown:
+     * Preprocess: 2.6ms (19.4%)
+     * Inference: 13.4ms (70.2%)
+     * Postprocess: 3.1ms (10.4%)
+
+2. **YOLOv9s**
+   - Slowest inference at 23.7ms
+   - Highest mAP50-95: 0.489
+   - Mid-sized model (7.2M parameters)
+   - Processing breakdown:
+     * Preprocess: 3.1ms (10.5%)
+     * Inference: 23.7ms (80.3%)
+     * Postprocess: 2.7ms (9.2%)
+
+3. **YOLO11s**
+   - Moderate inference at 17.7ms
+   - Lowest overall performance
+   - Largest model (9.4M parameters)
+   - Processing breakdown:
+     * Preprocess: 3.2ms (13.7%)
+     * Inference: 17.7ms (75.6%)
+     * Postprocess: 2.5ms (10.7%)
 
 ### Model Size Comparison
 
@@ -114,7 +155,11 @@ The following matrix shows how different diseases tend to appear together in ima
 
 ## Results and Visualization
 
-[Add sample detection results]
+> YOLO11 makes two false positive predictions
+![image](https://github.com/user-attachments/assets/42f0197e-c263-4e45-a674-eeb0af6860a7)
+
+> YOLOv8 has the highest confidence
+![image](https://github.com/user-attachments/assets/be052675-02f3-42fe-a6a1-b7412b25cf3f)
 
 ## References
 
