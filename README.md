@@ -2,11 +2,30 @@
 
 This project implements and compares three YOLO architectures (YOLOv8n, YOLOv9s, and YOLO11s) for detecting diseases in tomato leaves. The models are trained to identify 7 different conditions: Bacterial Spot, Early Blight, Healthy, Late Blight, Leaf Mold, Target Spot, and Black Spot.
 
+```
+Please, if someone can let me know why YOLO version 11 does not have v in it's name like it's older version
+I will be really grateful to them.
+```
+
 ## Dataset Overview
 
 ![image](https://github.com/user-attachments/assets/0430a3fd-41de-4b17-8d31-1cc6bca9c06d)
 
 The dataset consists of annotated tomato leaf images split into training, validation, and test sets. Each image is labeled with bounding boxes indicating disease locations and types.
+
+## Dataset Classes
+
+The dataset comprises 7 distinct categories of tomato leaf conditions:
+
+| Class ID | Condition | Description |
+|----------|-----------|-------------|
+| 0 | Bacterial Spot | A bacterial disease causing small, dark, water-soaked spots on leaves |
+| 1 | Early Blight | Fungal disease characterized by concentric rings forming target-like patterns |
+| 2 | Healthy | Normal, disease-free tomato leaves |
+| 3 | Late Blight | Water-soaked lesions that turn brown to purple in color |
+| 4 | Leaf Mold | Yellow spots on upper leaf surfaces and gray-brown mold underneath |
+| 5 | Target Spot | Circular brown spots with concentric rings |
+| 6 | Black Spot | Dark, circular lesions on leaves |
 
 ### Class Distribution
 
