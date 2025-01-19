@@ -1,0 +1,13 @@
+names:
+- Bacterial Spot
+- Early_Blight
+- Healthy
+- Late_blight
+- Leaf Mold
+- Target_Spot
+- black spot
+nc: 7
+path: d:\ai-projects-portfolio\tomato-leaf-disease-detection\tomato-leaf-diseases
+test: test/images
+train: train/images
+val: valid/images
